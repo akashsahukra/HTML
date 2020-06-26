@@ -1,0 +1,23 @@
+#a{
+	width: 300px;
+	height: 300px;
+	position: absolute;
+}
+#b{
+	width : 300px;
+	height: 300px;
+	background: yellow;
+	border: 3px solid red;
+	position: relative;
+	top : 20px;
+}
+#c{
+	width: 300px;
+	height: 300px;
+	background: red;
+	border : 3px solid yellow;
+	position: absolute;
+	top : 160px;
+	left : 150px;
+	z-index: -1;
+}
