@@ -1,0 +1,11 @@
+#link{
+	background: lightpink;
+	border : none;
+	padding : 1em;
+	border-radius: 12px;
+	text-decoration: none;
+	color : #000;
+}
+#link:hover{
+	border: 1px solid;
+}
