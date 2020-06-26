@@ -1,3 +1,10 @@
-table,tr,td{
+table,tr,td,th{
 	outline: thick ridge #ffccbb;
+}
+
+.body{
+	background-color: yellow;
+}
+#head{
+	background-color: #ffaa1d;
 }
