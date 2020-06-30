@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Control Statements</title>
+	<style>
+		span{
+			padding-right: 5px;
+		}
+	</style>
+</head>
+<body>
+<p>Check if a number is in between 10 and 100</p>
+<label for="num">Enter a digit</label>
+<input type="number" name="num" id="num">
+<p id="ans"></p>
+<button onclick ="check();">Check</button><br>
+<p>Enter a number to get its fibanocci series</p>
+<label for="num1">Enter a digit</label>
+<input type="number" name="num1" id="num1">
+<button onclick="fibanocci();">Enter</button><br>
+<div id="ans2"></div>
+
+<script>
+	function check(){
+		// document.getElementById("ans").innerHTML = "Hello";
+		var x = parseInt(document.getElementById('num').value);
+		if (x >= 10 && x<=100){
+			document.getElementById('ans').innerHTML = x + " is in b/w 10 to 100";
+		}else{
+			document.getElementById('ans').innerHTML = x + " is not in b/w 10 to 100";
+		}
+	}
+	function fibanocci(){
+		var a = 0;
+		var b = 1;
+		var n = parseInt(document.getElementById('num1').value);
+		document.getElementById('ans2').innerHTML = "";
+		for (var i = 0; i < n; i++) {
+			var para = document.createElement("span");
+			var node = document.createTextNode(a);
+			para.append(node);
+			var element = document.getElementById("ans2");
+			element.appendChild(para);
+			var temp = a
+			a = b;
+			b = temp+b;
+		}
+	}
+</script>
+</body>
+</html>
