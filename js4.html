@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Strings</title>
+</head>
+<body>
+	<h1>Returns the 5th,7th,9th words in the below sentence</h1>
+<p id="desc">First developed by Tim Berners-Lee in 1990, HTML is short for Hypertext Markup Language. HTML is used to create electronic documents (called pages) that are displayed on the World Wide Web. Each page contains a series of connections to other pages called hyperlinks;</p>
+<div id="ans"></div>
+<button onclick="check()">Enter</button>
+
+<script>
+	function check(){
+		var txt = document.getElementById('desc').textContent;
+		var element = document.getElementById('ans');
+		element.innerHTML = "";
+		var arr = txt.split(" ");
+
+		var node = document.createElement("p");
+		var textNode1 = document.createTextNode(arr[4]);
+		node.append(textNode1);
+		element.appendChild(node);
+
+		var node1 = document.createElement("p");
+		var textNode2 = document.createTextNode(arr[6]);
+		node1.append(textNode2);
+		element.appendChild(node1);
+
+		var node2 = document.createElement("p");
+		var textNode3 = document.createTextNode(arr[8]);
+		node2.append(textNode3);
+		element.appendChild(node2);
+	
+	}
+</script>
+</body>
+</html>
