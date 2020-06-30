@@ -4,7 +4,7 @@
 	<title>Control Statements</title>
 	<style>
 		span{
-			padding-right: 5px;
+			padding-right: 10px;
 		}
 	</style>
 </head>
@@ -22,13 +22,21 @@
 
 <script>
 	function check(){
-		// document.getElementById("ans").innerHTML = "Hello";
+		var n = document.getElementById('ans');
 		var x = parseInt(document.getElementById('num').value);
-		if (x >= 10 && x<=100){
-			document.getElementById('ans').innerHTML = x + " is in b/w 10 to 100";
-		}else{
-			document.getElementById('ans').innerHTML = x + " is not in b/w 10 to 100";
-		}
+		try { 
+	    	if(x == "")  throw "empty";
+	    	if(isNaN(x)) throw "not a number";
+	    	x = Number(x);
+	    	if(x < 10)  throw "too low";
+	    	if(x > 100)   throw "too high";
+	    	else{
+	    		n.innerHTML = x +" is in b/w 10 to 100";
+	    	}
+	  }
+	  	catch(err) {
+	    	n.innerHTML = "Input is " + err;
+	  }
 	}
 	function fibanocci(){
 		var a = 0;
